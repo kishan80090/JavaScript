@@ -1,0 +1,23 @@
+[
+    {
+        "sno": 1,
+        "insurancetype": "Primary",
+        "costpermonth": 1000
+    }
+    ,
+     {
+        "sno": 2,
+        "insurancetype": "family",
+        "costpermonth": 15000
+    },
+     {
+        "sno": 3,
+        "insurancetype": "car",
+        "costpermonth": 2000
+    }
+    , {
+        "sno": 4,
+        "insurancetype": "Primary",
+        "costpermonth": 1000
+    }
+]
