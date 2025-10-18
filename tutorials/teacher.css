@@ -1,0 +1,11 @@
+  .highlightwords {
+      border-color: lightblue;
+      border-style: ridge;
+      background-color: yellow;
+      width: fit-content;
+  }
+
+  .defaultwords {
+      color: blue;
+      width: fit-content;
+  }
