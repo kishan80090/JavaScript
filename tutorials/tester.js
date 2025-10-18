@@ -1,3 +1,10 @@
+
+
+const synth = window.speechSynthesis;
+let voices = [];
+getAllVoices();
+synth.onvoiceschanged = getAllVoices;
+
 const displayDiv = document.getElementById('dd');
 const totaldiv = document.getElementById('currentdiv');
 function wait(ms) {
@@ -20,3 +27,13 @@ function addWord(word, className) {
 
       }
     }
+
+
+    function getAllVoices() {
+  voices = synth.getVoices() || [];
+  // Optional: filter/sort voices if you need specific languages/genders
+  // Example: voices = voices.filter(v => v.lang.startsWith('en'));
+console.table(voices);
+
+}
+getAllVoices();
