@@ -1,5 +1,5 @@
 
-const waitms=10;
+const waitms = 10;
 const synth = window.speechSynthesis;
 let voices = [];
 getAllVoices();
@@ -17,20 +17,25 @@ function addWord(word, className) {
   p.textContent = word;
   displayDiv.appendChild(p);
 }
-function speakWord(word) {
+async function speakWord(word) {
   const utterance = new SpeechSynthesisUtterance(word);
   // Optional: set voice, pitch, rate, volume
   // utterance.voice = voices.find(v => v.lang === 'en-US');
   synth.speak(utterance);
+  totaldiv.innerHTML = word;
+  await wait(waitms * word.length);
+
 }
 async function showOneWord(sentence) {
-
+  displayDiv.innerHTML = "";
+  totaldiv.innerHTML = "";
   let words = sentence.split(" ");
   for (let word of words) {
-    totaldiv.innerHTML = word;
+
     displayDiv.innerHTML = `${displayDiv.innerHTML} ${word}`;
     speakWord(word);
-    await wait(waitms);
+    await wait(waitms*100 );
+
 
   }
 }
