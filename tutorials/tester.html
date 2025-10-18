@@ -9,23 +9,16 @@
 </head>
 
 <body>
+  <div class="highlightwords" id="currentdiv"></div>
   <div id="dd">
 
 
   </div>
-  <button onclick="showOneWord()">Test Wait </button>
+  <button onclick="showOneWord('This is a test sentence')">Test Wait </button>
   <script src="tester.js"> </script>
   <script>
     const displayDiv = document.getElementById('dd');
-    async function showOneWord() {
-      let sentence = "This is a test sentence";
-      let words = sentence.split(" ");
-      for (let word of words) {
-        displayDiv.innerHTML = `<br><p class="highlightwords"> ${word} </p>`;
-        await wait(5000);
 
-      }
-    }
   </script>
 </body>
 
